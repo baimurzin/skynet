@@ -1,0 +1,10 @@
+.pstrength-minchar {
+font-size : 10px;
+    display: none;
+}
+.pstrength-bar {
+    margin: 15px 0 0 15px;
+}
+.pstrength-info {
+    padding-left: 15px;
+}

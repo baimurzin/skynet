@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Support\Facades\Config;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -39,5 +40,27 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	public function transactions() {
 		return $this->hasMany('\App\Transaction');
 	}
+
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany первого уровня нижний слой
+	 */
+	public function children()
+	{
+		return $this->hasMany('\App\User', 'referer_id', 'id');
+	}
+
+	public function parent() {
+		return $this->hasOne('\App\User', 'id', 'referer_id');
+	}
+
+	public function isAdmin() {
+		return $this->email == Config::get('constants.ADMIN_LOGIN');
+	}
+
+	public function fullName() {
+		return $this->lastname . ' ' . $this->firstname;
+	}
+
 
 }

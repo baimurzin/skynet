@@ -173,36 +173,33 @@
                         <p>Реквизиты</p>
                     </div>
                     <div class="row no-padding light rek-table">
-                        <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                        <div class="rek-control full">
+                            <p class="head">Компания</p>
+                            <p>Общество с Ограниченной Ответственностью "Капитал"</p>
                         </div>
                         <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                            <p class="head">Адрес</p>
+                            <p> 455044 Челябинская область, г. Магнитогорск пр. Карла Маркса 105/1-31</p>
                         </div>
                         <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                            <p class="head">Банк</p>
+                            <p>Р/С 40702810200020014533 Филиал номер 6602 Банка ВТБ 24 (ЗАО), г.Екатеренбург, пр. Ленина 27</p>
                         </div>
                         <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                            <p class="head">Корректировочный счет</p>
+                            <p> 3010181040000000090</p>
                         </div>
                         <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                            <p class="head">БИК</p>
+                            <p>046568905</p>
                         </div>
                         <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
-                        </div>
-                        <div class="rek-control">
-                            <p class="head">КПП</p>
-                            <p>1234567891343</p>
+                            <p class="head">Директор</p>
+                            <p>Малашта Андрей Игоревич</p>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>

@@ -14,14 +14,14 @@ class AdminController extends Controller
 {
 
     private $percent = [
-        1 => 30,
-        2 => 20,
-        3 => 15,
-        4 => 10,
+        1 => 4,
+        2 => 3,
+        3 => 1,
+        4 => 1,
         5 => 1,
-        6 => 1,
-        7 => 1,
-        8 => 1
+        6 => 0.5,
+        7 => 0.5,
+        8 => 0.5
     ];
 
     public function index()

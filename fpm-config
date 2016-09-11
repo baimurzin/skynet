@@ -1,0 +1,40 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/skynet/public;
+
+    index index.php index.html index.htm;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+    location ~* ^.+\.(css|js|jpg|png|svg)$ {
+        expires max;
+    }
+
+    access_log  /var/www/skynet/storage/logs/access.log;
+    error_log  /var/www/skynet/storage/logs/error.log;
+
+    sendfile off;
+
+    client_max_body_size 100m;
+
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}

@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function() {
-	return '123';
+	return view('welcome');
 });
 
 Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabinet'], function () {
 	Route::get('/', ['as' => 'home', 'uses' => 'AccountController@index']);
+
+	Route::get('/history', ['as' => 'history', 'uses' => 'HistoryController@index']);
+
 	Route::get('/ajax/parts', 'AjaxController@getParts');
+
+
 	Route::get('/add_reqs', 'RequisiteController@index');
 	Route::post('/add_reqs', 'RequisiteController@store');
 	Route::post('/buyshares', 'AccountController@buyShares');

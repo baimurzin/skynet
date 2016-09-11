@@ -90,12 +90,30 @@ body {
     width: 50%;
 }
 .reks {
-    width: 25%;
+    width: 100%;
+}
+.indicator {
+    background: rgba(255,255,255,.3);
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .04em .48em;
+}
+.this .indicator {
+    background: rgb(255, 115, 54);
+}
+.count {
+    position: relative;
+    right: .5px;
+    top:-1px;
+    font-size: 12px;
 }
 .center {
     margin: auto;
 }
 .rek-table {
+    max-width: 470px;
     position: relative;
 }
 .table-filled {
@@ -130,15 +148,63 @@ input {
     color: #fff;
     background: #0064dc;
     border: none;
+    transition: .3s;
     padding: 10px 20px;
     border-radius: 4px;
     font-family: 'Helvetica';
 }
+.button-primary:hover {
+    background: #0353b3;
+}
+.button-orange:hover {
+    background: #d0531e;
+}
 .logo {
+    position: relative;
     padding: .625em 0;
     font-size: 1.625em;
     font-family: 'Anders';
     color: #0064dc;
+    transition: .5s;
+}
+.logo:hover {
+    letter-spacing: .2em;
+}
+.logo:before {
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    height: 1px;
+    background: #0064dc;
+    content: '';
+}
+.logo:after {
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    height: 1px;
+    bottom: 10px;
+    width:100%;
+    background: #0064dc;
+    content: '';
+}
+.logo:hover:after {
+    width: 1px;
+    opacity: 1;
+    top: 50%;
+    right: -15px;
+    margin-top: -15px;
+    height: 30px;
+}
+.logo:hover:before {
+    height: 30px;
+    width: 1px;
+    opacity: 1;
+    top: 50%;
+    left: -15px;
+    margin-top: -15px;
 }
 .logo p {
     margin: 0;
@@ -149,24 +215,97 @@ input {
     justify-content: space-between;
     align-items: center;
 }
+.exception {
+    color:#D80027;
+    font-size: .875em;
+    position: relative;
+}
+.exception-float {
+    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    top:-2em;
+    background: #D80027;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    font-size: .875em;
+    left: 2em;
+    position: absolute;
+}
+.exception-float:after{
+    content:"\A";
+    border-style: solid;
+    border-width: 0 15px 15px 0;
+    border-color: transparent #d80027 transparent transparent;
+    position: absolute;
+    left: 1em;
+    bottom: -1em;
+}
+.exception:before {
+    content: url('img/multiply.png');
+}
 nav {
     box-shadow: 0 0 10px rgba(0,0,0,.4);
     font-family: 'Helvetica';
-    color: #1d1d1   d;
+    color: #1d1d1d;
     font-weight: 300;
     background: #fff;
     width: 100%;
 }
 nav ul {
-    font-size: .875em;
+    text-align: center;
+    font-size:.875em;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 nav ul li {
-    padding: 0 10px;
+    position: relative;
+    transition: .3s;
+    padding: 10px;
+    margin: 0 5px;
+    transition: .3s;
     text-transform: uppercase;
-    display: inline-block;  
+    display: inline-block;   
+}
+nav ul li a {
+    transition: .3s;
+}
+nav ul li:before {
+    content: '';
+    background: #0064dc;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    transition: .3s;
+    top: -10px;
+    opacity: 0;
+    position: absolute;
+}
+nav ul li:after {
+    transition: .3s;
+    content: '';
+    opacity: 0;
+    background: #0064dc;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    position: absolute;    
+}
+nav ul li:hover a {
+    color: #0064dc;
+}
+nav ul li:hover:before {
+    top: 0px;
+    opacity: 1;
+}
+nav ul li:hover:after {
+    bottom:0px;
+    opacity: 1;
 }
 nav ul li a {
     color: #1d1d1d;
@@ -271,6 +410,7 @@ section {
     align-items: flex-end;
 }
 .form-control {
+    position: relative;
     margin: 15px;
     display: block;
 }
@@ -311,7 +451,11 @@ footer ul li {
     color: rgba(255,255,255,.5);
     font-size: .875em;
     margin: .7em 0;
+    transition: .3s;
     letter-spacing: .5px;
+}
+footer ul li:hover {
+    color: #fff;
 }
 footer ul li img {
     position: absolute;
@@ -424,8 +568,13 @@ footer .social li:hover {
     background: #0064dc;
 }
 .tabs ul li {
+    position: relative;
     padding: 1em 15px;
     display: inline-block;
+    transition: 0.3s;
+}
+.tabs ul li:hover {
+    background: #0064dc;
 }
 .full {
     width: 100%;

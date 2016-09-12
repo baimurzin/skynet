@@ -81,6 +81,17 @@ class AdminController extends Controller
         }
     }
 
+    public function getUsersPage(Request $request)
+    {
+
+//        $users = User::all();
+        return view('admin.content.users', compact('users'));
+    }
+
+    public function getUsersAll(Request $request) {
+        return User::all();
+    }
+
     private function payPartnersMoney($user, $money, $count)
     {
         if ($count == 0) {
@@ -99,4 +110,6 @@ class AdminController extends Controller
             return;
         }
     }
+
+
 }

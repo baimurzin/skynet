@@ -4,6 +4,8 @@ $(function () {
     adminModule = {
         userShareRequestTable: '#userShareRequestTable',
         userShareRequestTableSelected: [],
+        usersTable: '#usersTable',
+        usersTableSelected: [],
 
         initUserShareRequestTable: function () {
             $(adminModule.userShareRequestTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', true);
@@ -60,6 +62,66 @@ $(function () {
                 adminModule.userShareRequestTableSelected = adminModule.tableSelector(e, r, adminModule.userShareRequestTable, adminModule.userShareRequestTableSelected);
 
                 $(adminModule.userShareRequestTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', !adminModule.userShareRequestTableSelected.length);
+            });
+        },
+
+        initUsersTable: function () {
+            $(adminModule.usersTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', true);
+
+            $(adminModule.usersTable).bootstrapTable({
+                clickToSelect: true,
+                pagination: true,
+                classes: 'table table-striped',
+                idField: 'id',
+                uniqueID: 'id',
+                escape: true,
+                method: 'GET',
+                sortName: 'created_at',
+                sortOrder: 'desc',
+                url: $(adminModule.usersTable).data('url'),
+                columns: [
+                    {
+                        field: 'full_name',
+                        title: 'Фамилия Имя',
+                        sortable: true
+                    },
+                    {
+                        field: 'email',
+                        title: 'E-mail',
+                        sortable: true
+                    },
+                    {
+                        field: 'phone',
+                        title: 'Телефон'
+                    },
+                    {
+                        field: 'skype',
+                        title: 'Skype'
+                    },
+                    {
+                        field: 'a_money',
+                        title: 'Партнерские'
+                    },
+                    {
+                        field: 'dividends',
+                        title: "Дивиденды"
+                    },
+                    {
+                        field: 'created_at',
+                        title: 'Дата',
+                        sortable: true,
+                        width: '150px',
+                        formatter: function(value, row, index) {
+                            return '<span class="small">'+value+'</span>';
+                        }
+                    }
+                ]
+            });
+
+            $(adminModule.usersTable).on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function (e, r) {
+                adminModule.usersTableSelected = adminModule.tableSelector(e, r, adminModule.usersTable, adminModule.usersTableSelected);
+
+                $(adminModule.usersTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', !adminModule.usersTableSelected.length);
             });
         },
 

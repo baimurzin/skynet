@@ -32,6 +32,10 @@ Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabin
 
 Route::group(['middleware' => ['admin'], 'prefix' => 'panel' ], function () {
 	Route::get('/' ,['as' => 'panel', 'uses' => 'AdminController@index']);
+
+	Route::get('/users' ,['as' => 'admin.users', 'uses' => 'AdminController@getUsersPage']);
+	Route::get('/users/all' ,['as' => 'get_users_list', 'uses' => 'AdminController@getUsersAll']);
+
 	Route::get('/sharesrequests' ,['as' => 'get_admin_requests', 'uses' => 'AdminController@getSharesRequests']);
 	Route::delete('/sharesrequests/{ids}' ,['as' => 'delete_admin_requests', 'uses' => 'AdminController@deleteSharesRequests']);
 	Route::post('/sharesrequests/{ids}' ,['as' => 'approve_admin_requests', 'uses' => 'AdminController@approveSharesRequests']);

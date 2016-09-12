@@ -25,12 +25,12 @@
                     {{--</li>--}}
                 {{--</ul>--}}
             {{--</li>--}}
-            {{--<li>--}}
-                {{--<a href="/panel/users">--}}
-                    {{--<i class="fa fa-users"></i> <span>Пользователи</span>--}}
+            <li>
+                <a href="/panel/users">
+                    <i class="fa fa-users"></i> <span>Пользователи</span>
                     {{--<small class="label pull-right bg-green"> {{$count_users}} </small>--}}
-                {{--</a>--}}
-            {{--</li>--}}
+                </a>
+            </li>
 
             {{--<li>--}}
                 {{--<a href="/panel/news">--}}

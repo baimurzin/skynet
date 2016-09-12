@@ -33,6 +33,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+	protected $appends = ['full_name'];
+
 	public function requisites() {
 		return $this->hasMany('\App\Requisite');
 	}
@@ -61,6 +63,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	public function fullName() {
 		return $this->lastname . ' ' . $this->firstname;
 	}
+
+	public function getFullNameAttribute()
+	{
+		return $this->lastname . " " . $this->firstname;
+	}
+
 
 
 }

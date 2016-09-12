@@ -45,7 +45,7 @@ body {
 }
 .account-info {
     font-family: 'Helvetica';
-    font-weight: 300;
+    font-weight: 400;
 }
 .col {
     padding: 0 15px;
@@ -56,7 +56,7 @@ body {
 }
 #bank-rek {
     font-family: 'Helvetica';
-    font-weight: 300;
+    font-weight: 400;
 }
 #parts .content  {
     display: flex;
@@ -73,7 +73,7 @@ body {
     background: rgb(255, 115, 54);
 }
 .medtitle {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.125em;
 }
 .no-padding {
@@ -126,6 +126,7 @@ body {
 .rek-control {
     display: inline-block;   
     padding: .375em 0;
+    width: 100%;
 }
 .rek-control .head {
     background: #ff7336;
@@ -148,8 +149,8 @@ input {
     color: #fff;
     background: #0064dc;
     border: none;
-    transition: .3s;
-    padding: 10px 20px;
+    transition: .3s;    
+    padding: 15px 40px;
     border-radius: 4px;
     font-family: 'Helvetica';
 }
@@ -249,7 +250,7 @@ nav {
     box-shadow: 0 0 10px rgba(0,0,0,.4);
     font-family: 'Helvetica';
     color: #1d1d1d;
-    font-weight: 300;
+    font-weight: 400;
     background: #fff;
     width: 100%;
 }
@@ -350,7 +351,7 @@ section .title p {
 }
 section .content {
     font-family: 'Helvetica';
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
     text-align: justify;
@@ -418,8 +419,9 @@ section {
     display: block;
     width: 100%;
     padding-left: 15px;
-    font-size: .75em;
-    color: #8d8d8d;
+    font-size: .875em;
+    color: #585858;
+    margin-bottom: 5px; 
 }
 .form-control input {
     border-color: rgba(0,0,0,.4);
@@ -440,7 +442,7 @@ footer .container {
 }
 
 footer ul {
-    margin: 2em 0;
+    margin: 1em 0;
     list-style: none;
     padding: 0;
     font-family: 'Helvetica';
@@ -464,7 +466,7 @@ footer ul li img {
 }
 footer .social img {
     position: relative;
-    width: 24px;
+    width: 30px;
 }
 footer .social li {
     opacity: .75;
@@ -482,7 +484,7 @@ footer .social li:hover {
     color: #fff;
 }
 #reg form {
-    width:600px;
+    max-width:600px;
     margin: auto;
     text-align: center;
 }   
@@ -492,6 +494,7 @@ footer .social li:hover {
     text-align: left;
 }
 #reg form .subtitle p {
+    font-size:1.2em;
     font-weight: 300;
     margin: 40px 0 0 0;
 }
@@ -589,20 +592,125 @@ footer .social li:hover {
     margin: 15px;
     display: inline-block;
     width: 200px;
+    transition: .3s;
 }
 .item img {
     width: 100%;
 }
 .item p {
+    z-index: 99 !important;
+    transition: .3s;
     margin: 0;
     padding: 1em 0;
     color: #fff;
     position: absolute;
     width: 100%;
+    height: 20px;
     left: 0;
-    bottom: 0;
+    bottom: 6px;
     background: rgba(0,0,0,.6);
 }
 .item span {
     padding:1em;
+}
+.item:hover >  p {
+    transition: .3s;
+    height: 86%;
+}
+.item:hover > p > span {
+    position: absolute;
+    text-align: center;
+    color: #ff7336;
+    top:50%;
+    margin-top: -28px;
+}
+/*MOBILE*/
+nav .menu-button {
+    margin-top: 5px;
+    padding-right: 15px;
+    display: none;
+}
+nav .menu-button img {
+    max-width: 20px;
+}
+@media all and (max-width: 768px) {
+    nav ul {
+        opacity: 0;
+        height: 0px;
+        position: absolute;
+        overflow: hidden;
+        background: #ffffff;
+        width: 50%;
+        transition: .5s;
+        top: 66.5px;
+        border-top: 1px solid #f0f0f0;
+        box-shadow: 0 7px 10px rgba(0,0,0,.5);
+    }
+    nav {
+        position: relative;
+        z-index: 999;
+    }
+    .nav-active {
+        opacity: 1;
+        height: auto;
+    }
+    nav .menu-button {
+        display: block;
+    }
+    header .content { 
+        padding:2em 0;
+    }
+    header .title p {
+        font-size: 1.5em;
+    }
+    input {
+        margin: 1em 0;
+    }
+    iframe {
+        width: 100%;
+    }
+    .container {
+        padding:0 7.5px;
+    }
+    .container p {
+        z-index: -1;
+    }
+    .row {
+        padding: 0 7.5px;
+    }
+    #main {
+        position: relative;
+    }
+    footer {
+        overflow-x: hidden;
+    }
+    footer .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    footer .logo {
+        margin: 0;
+    }
+    footer .copyrights, footer .nav {
+        display: none;
+    }
+    footer ul {
+        margin: .5em 0;
+    }
+    footer .social {
+        display: none;
+    }
+    #reg form .subtitle {
+        padding: 0;
+        text-align: center;
+    }
+    #reg form {
+        width: 100%;
+    }
+    .form-control {
+        margin: 7.5px;
+    }
+    .button-primary {
+        padding: 10px 20px;
+    }
 }

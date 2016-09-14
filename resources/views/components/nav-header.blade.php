@@ -5,13 +5,11 @@
                 <p>SKYNET</p>
             </div>
             <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">Войти</a></li>
-                <li><a href="">Новости</a></li>
-                <li><a href="">Проект</a></li>
-                <li><a href="">Документы</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Поддержка</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/auth/login">Войти</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/about">Проект</a></li>
+                <li><a href="/docs">Документы</a></li>
             </ul>
         </div>
     </div>

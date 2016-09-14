@@ -2,9 +2,9 @@
 <head>
     <title>SKYNET</title>
     <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/index.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/style.css')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('plugins/slider/css/lightslider.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('all/plugins/slider/css/lightslider.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row flexible">
             <div class="menu-button">
-                <img src="{{asset('assets/img/menu.svg')}}">
+                <img src="{{asset('all/assets/img/menu.svg')}}">
             </div>
             <div class="logo">
                 <p>SKYNET</p>
@@ -20,11 +20,9 @@
             <ul class="list">
                 <li><a href="/">Главная</a></li>
                 <li><a href="/auth/login">Войти</a></li>
-                <li><a href="">Новости</a></li>
-                <li><a href="">Проект</a></li>
-                <li><a href="">Документы</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Поддержка</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/about">Проект</a></li>
+                <li><a href="/docs">Документы</a></li>
             </ul>
         </div>
     </div>
@@ -82,13 +80,13 @@
             </div>
             <div class="row content">
                 <ul id="partner">
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
                 </ul>
             </div>
         </div>
@@ -101,9 +99,9 @@
                     <p>Следите за нами в социальных сетях</p>
                 </div>
                 <div class="row content">
-                    <a href=""><img src="{{asset('assets/img/instagram.svg')}}"></a>
-                    <a href=""><img src="{{asset('assets/img/vk.svg')}}"></a>
-                    <a href=""><img src="{{asset('assets/img/twitter.svg')}}"></a>
+                    <a href=""><img src="{{asset('all/assets/img/instagram.svg')}}"></a>
+                    <a href=""><img src="{{asset('all/assets/img/vk.svg')}}"></a>
+                    <a href=""><img src="{{asset('all/assets/img/twitter.svg')}}"></a>
                 </div>
             </div>
         </div>
@@ -131,21 +129,21 @@
         </div>
         <div class="container col-5 tel">
             <ul class="light">
-                <li><img src="{{asset('assets/img/phone.png')}}">8 (800) 555-35-35</li>
-                <li><img src="{{asset('assets/img/phone.png')}}">+7 (999) 162-54-84</li>
+                <li><img src="{{asset('all/assets/img/phone.png')}}">8 (800) 555-35-35</li>
+                <li><img src="{{asset('all/assets/img/phone.png')}}">+7 (999) 162-54-84</li>
             </ul>
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <li><img src="{{asset('assets/img/instagram.svg')}}"></li>
-                <li><img src="{{asset('assets/img/vk.svg')}}"></li>
-                <li><img src="{{asset('assets/img/twitter.svg')}}"></li>
+                <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
+                <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
+                <li><img src="{{asset('all/assets/img/twitter.svg')}}"></li>
             </ul>
         </div>
     </div>
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="{{asset('plugins/slider/js/lightslider.js')}}"></script>
+<script src="{{asset('all/plugins/slider/js/lightslider.js')}}"></script>
 <script type="text/javascript">
     $(document).ready( function() {
         $('#partner').lightSlider({

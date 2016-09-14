@@ -9,14 +9,7 @@
                 </div>
             </div>
             <div class="row content">
-                @if (count($errors))
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            // Remove the spaces between the brackets
-                            <li>{ { $error } }</li>
-                        @endforeach
-                    </ul>
-                @endif
+
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
 
@@ -33,6 +26,14 @@
                             <label>Пароль:</label>
                             <input name="password" type="text" placeholder="********">
                         </div>
+
+                        @if (count($errors))
+                            <ul class="list-group" style="list-style: none;">
+                                @foreach($errors->all() as $error)
+                                    <li class="exception">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                     </div>
                     <div class="row">
                         <div class="form-control">

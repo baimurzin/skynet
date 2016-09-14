@@ -8,6 +8,8 @@
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('all/css/morris.css')}}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.css" />
+
 
 </head>
 <body>
@@ -20,6 +22,10 @@
 @include('components.footer')
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-ru-RU.min.js"></script>
+
+<script src="{{asset('all/js/common.module.js')}}"></script>
 <script src="{{asset('all/js/raphael.min.js')}}"></script>
 <script src="{{asset('all/js/morris.js')}}"></script>
 @yield('scripts')

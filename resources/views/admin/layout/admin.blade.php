@@ -31,7 +31,7 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{'/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.css" />
-    <link rel="stylesheet" href="{{asset('/js/lobibox/css/lobibox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('all/js/lobibox/css/lobibox.min.css')}}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -89,11 +89,11 @@
 <script src="{{asset('/admin/plugins/fastclick/fastclick.min.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-ru-RU.min.js"></script>
-<script src="{{asset('/js/lobibox/js/lobibox.min.js')}}"></script>
+<script src="{{asset('all/js/lobibox/js/lobibox.min.js')}}"></script>
 
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/js/app.min.js')}}"></script>
-<script src="{{asset('/js/common.module.js')}}"></script>
+<script src="{{asset('all/js/common.module.js')}}"></script>
 <script src="{{asset('/admin/js/admin.module.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="dist/js/pages/dashboard.js"></script>--}}

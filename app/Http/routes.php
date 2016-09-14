@@ -20,7 +20,15 @@ Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabin
 
 	Route::get('/history', ['as' => 'history', 'uses' => 'HistoryController@index']);
 
+	Route::get('/docs', ['as' => 'docs', 'uses' => 'DocController@index']);
+
+	Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
+
 	Route::get('/ajax/parts', 'AjaxController@getParts');
+	Route::get('/history/invoiceHistory', ['as' => 'history.invoice', 'uses' => 'HistoryController@getUserInvoices']);
+	Route::get('/history/withdrawHistory', ['as' => 'history.withdraw', 'uses' => 'HistoryController@getUserWithdraw']);
+
+	Route::get('/history/transactions', ['as' => 'history.transact', 'uses' => 'HistoryController@getUserTransacts']);
 
 
 	Route::get('/add_reqs', 'RequisiteController@index');
@@ -36,9 +44,13 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'panel' ], function () {
 	Route::get('/users' ,['as' => 'admin.users', 'uses' => 'AdminController@getUsersPage']);
 	Route::get('/users/all' ,['as' => 'get_users_list', 'uses' => 'AdminController@getUsersAll']);
 
+
+
 	Route::get('/sharesrequests' ,['as' => 'get_admin_requests', 'uses' => 'AdminController@getSharesRequests']);
 	Route::delete('/sharesrequests/{ids}' ,['as' => 'delete_admin_requests', 'uses' => 'AdminController@deleteSharesRequests']);
 	Route::post('/sharesrequests/{ids}' ,['as' => 'approve_admin_requests', 'uses' => 'AdminController@approveSharesRequests']);
+
+	Route::post('/dividends/pay' ,['as' => 'pay.dividends', 'uses' => 'AdminController@payDividends']);
 });
 
 Route::controllers([

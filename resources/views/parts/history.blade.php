@@ -11,105 +11,24 @@
             <div class="row content">
                 <div class="col-6">
                     <div class="midtitle">
-                        <p>История вводов</p>
+                        <p>История партнерских</p>
                     </div>
-                    <table class="full">
-                        <tr class="table-header">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                    </table>
+                    <table data-url="{{URL::route('history.invoice')}}" id="invoiceTable" class="full"></table>
                 </div>
                 <div class="col-6">
                     <div class="midtitle">
                         <p>История выводов</p>
                     </div>
-                    <table class="full">
-                        <tr class="table-header second-color">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                        <tr class="filled">
-                            <td>Дата</td>
-                            <td>Кто сделал</td>
-                            <td>Валюта</td>
-                            <td>Получено</td>
-                            <td>Процент</td>
-                            <td>Сумма</td>
-                        </tr>
-                    </table>
+                    <table data-url="{{URL::route('history.transact')}}" id="transactTable"  class="full"></table>
+                </div>
+            </div>
+            <div class="row content">
+                <div class="col-6">
+                    <div class="midtitle">
+                        <p>Историяя взносов</p>
+                    </div>
+                    <table data-url="{{URL::route('history.withdraw')}}" id="withdrawTable" class="full"></table>
+
                 </div>
             </div>
         </div>
@@ -117,5 +36,10 @@
 @stop
 
 @section('scripts')
-
+    <script>
+        $(document).ready(function () {
+            commonModule.initInvoiceTable();
+            commonModule.initTransactTable();
+        })
+    </script>
 @stop

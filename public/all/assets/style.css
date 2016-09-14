@@ -308,6 +308,9 @@ nav ul li:hover:after {
     bottom:0px;
     opacity: 1;
 }
+li a {
+    color: #fff;
+}
 nav ul li a {
     color: #1d1d1d;
     text-decoration: none;

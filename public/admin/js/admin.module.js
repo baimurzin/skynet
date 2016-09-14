@@ -6,6 +6,7 @@ $(function () {
         userShareRequestTableSelected: [],
         usersTable: '#usersTable',
         usersTableSelected: [],
+        dividendPayForm: '#dividendPayForm',
 
         initUserShareRequestTable: function () {
             $(adminModule.userShareRequestTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', true);
@@ -51,8 +52,8 @@ $(function () {
                         title: 'Дата',
                         sortable: true,
                         width: '150px',
-                        formatter: function(value, row, index) {
-                            return '<span class="small">'+value+'</span>';
+                        formatter: function (value, row, index) {
+                            return '<span class="small">' + value + '</span>';
                         }
                     }
                 ]
@@ -111,8 +112,8 @@ $(function () {
                         title: 'Дата',
                         sortable: true,
                         width: '150px',
-                        formatter: function(value, row, index) {
-                            return '<span class="small">'+value+'</span>';
+                        formatter: function (value, row, index) {
+                            return '<span class="small">' + value + '</span>';
                         }
                     }
                 ]
@@ -155,6 +156,21 @@ $(function () {
             return ids;
         },
 
+        payDividends: function (o) {
+            var data = $(adminModule.dividendPayForm).serialize();
+            $.ajax({
+                type: 'POST',
+                data: data,
+                url: $(adminModule.dividendPayForm).data('pay_url'),
+                success: function (data) {
+                    commonModule.notify('success', "Дивиденды рассчитаны");
+                },
+                error: function (err) {
+                    commonModule.notify('error', err.message);
+                }
+            })
+        },
+
         approveSharesRequest: function (target) {
             var url = $(target).data('approve_url'),
                 ids = adminModule.userShareRequestTableSelected;
@@ -166,7 +182,7 @@ $(function () {
                     commonModule.refreshTable(adminModule.userShareRequestTable);
                 },
                 error: function (e) {
-                    commonModule.notify('error', e.status+': '+ e.statusText);
+                    commonModule.notify('error', e.status + ': ' + e.statusText);
                 }
             })
         },

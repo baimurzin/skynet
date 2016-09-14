@@ -26,13 +26,13 @@
                             Выплатить дивиденды
                         </h3>
                         <div class="box-body">
-                            <form >
+                            <form id="dividendPayForm" data-pay_url="{{route('pay.dividends')}}">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                                 <div class="col-md-6">
-                                    <input type="number" name="value" class="form-control">
+                                    <input type="number" name="percent" placeholder="Процент от 0.01 до 1.00" class="form-control">
                                 </div>
                                 <div class="">
-                                    <button class="btn btn-success">Рассчитать</button>
+                                    <button type="button" class="btn btn-success" onclick="return adminModule.payDividends(this);">Рассчитать</button>
                                 </div>
                             </form>
                         </div>

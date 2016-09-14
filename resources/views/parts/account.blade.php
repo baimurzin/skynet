@@ -7,10 +7,10 @@
             <div class="row">
                 <ul>
                     <li class="this">Главная</li>
-                    <li>История операции</li>
-                    <li>Структура</li>
-                    <li>Документы</li>
-                    <li>Новости</li>
+                    <li><a  href="{{route('history')}}">История операции</a></li>
+                    {{--<li>Структура</li>--}}
+                    <li><a href="{{route('docs')}}">Документы</a></li>
+                    <li><a href="{{route('news')}}">Новости</a></li>
                 </ul>
             </div>
         </div>

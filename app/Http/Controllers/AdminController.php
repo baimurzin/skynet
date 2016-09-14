@@ -117,7 +117,8 @@ class AdminController extends Controller
         }
     }
 
-    private function writeLog($user_made, $user_got_money, $percent, $money) {
+    private function writeLog($user_made, $user_got_money, $percent, $money)
+    {
         $log = new MoneyLog();
         $got = $money * $percent / 100;
         $log->fill([
@@ -131,5 +132,18 @@ class AdminController extends Controller
         $log->save();
     }
 
+
+    public function payDividends(Request $request)
+    {
+        $percent = (float)$request->get('percent');
+
+        if ($percent <= 0 || $percent > 1) {
+            return response("", 500);
+        }
+
+        return DB::table('users')->update([
+            'dividends' => $this->a_money
+        ]);
+    }
 
 }

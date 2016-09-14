@@ -2,9 +2,11 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class Transaction extends Model {
+class Transaction extends Model
+{
 
     use SoftDeletes;
 
@@ -13,7 +15,7 @@ class Transaction extends Model {
 
     protected $dates = ['deleted_at'];
 
-	protected $table = 'transactions';
+    protected $table = 'transactions';
 
     protected $fillable = ['status', 'amount'];
 
@@ -23,17 +25,31 @@ class Transaction extends Model {
      * Custom functions
      */
 
-    public static function calculateRestShares() {
+    public static function calculateRestShares()
+    {
         return self::sum('amount');
     }
 
-    public static function getNotApprovalRequests() {
+    public static function getNotApprovalRequests()
+    {
         return self::whereStatus(self::STATUS_PROCESSING)->get();
     }
 
-    public static function deleteTransaction($ids) {
+    public static function deleteTransaction($ids)
+    {
         self::whereIn('id', $ids)
             ->delete();
+    }
+
+    public static function getUserTransacts($user = false)
+    {
+        if (!$user) {
+            $user = Auth::user();
+        }
+
+        return self::where('user_id', $user->id)
+            ->where('status', Transaction::STATUS_ACCEPTED)
+            ->get();
     }
 
     /**

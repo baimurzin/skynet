@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\MoneyLog;
 use App\Transaction;
 use App\User;
 use Illuminate\Database\QueryException;
@@ -28,6 +29,20 @@ class AdminController extends Controller
     {
         $user = Auth::user();
         return view('admin.content.main', compact('user'));
+    }
+
+    public function getUsersPage(Request $request)
+    {
+        return view('admin.content.users', compact('users'));
+    }
+
+    public function getUsersAll(Request $request)
+    {
+        if (!$request->ajax()) {
+            abort(400);
+        }
+
+        return User::all();
     }
 
     public function getSharesRequests(Request $request)
@@ -62,7 +77,7 @@ class AdminController extends Controller
             foreach ($ids as $id) {
                 $transact = Transaction::find($id);
                 $userMakeRequest = $transact->user;
-                $this->payPartnersMoney($userMakeRequest, $transact->amount * 5000, 0);
+                $this->payPartnersMoney($userMakeRequest, $transact->amount * 5000, 0, $userMakeRequest);
             }
 
             $result = Transaction::whereIn('id', $ids)
@@ -81,18 +96,8 @@ class AdminController extends Controller
         }
     }
 
-    public function getUsersPage(Request $request)
-    {
 
-//        $users = User::all();
-        return view('admin.content.users', compact('users'));
-    }
-
-    public function getUsersAll(Request $request) {
-        return User::all();
-    }
-
-    private function payPartnersMoney($user, $money, $count)
+    private function payPartnersMoney($user, $money, $count, $user_made)
     {
         if ($count == 0) {
             $count = 1;
@@ -103,12 +108,27 @@ class AdminController extends Controller
             $currentWorkingUser->increment('a_money', $userGet);
             $currentWorkingUser->save();
             $count++;
-            $this->payPartnersMoney($currentWorkingUser, $money, $count);
+            $this->payPartnersMoney($currentWorkingUser, $money, $count, $user_made);
+            $this->writeLog($user_made, $currentWorkingUser, $this->percent[$count], $money);
         }
         //Заканчиваем как отработал 8
         if ($count == 8) {
             return;
         }
+    }
+
+    private function writeLog($user_made, $user_got_money, $percent, $money) {
+        $log = new MoneyLog();
+        $got = $money * $percent / 100;
+        $log->fill([
+            'user_made' => $user_made->id,
+            'user_got_money' => $user_got_money->id,
+            'percent' => $percent,
+            'sum' => $money,
+            'money_got' => $got
+        ]);
+
+        $log->save();
     }
 
 

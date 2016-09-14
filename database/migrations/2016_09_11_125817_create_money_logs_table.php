@@ -17,7 +17,9 @@ class CreateMoneyLogsTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_made')->unsigned();
 			$table->integer('user_got_money')->unsigned();
-			$table->string('');
+			$table->decimal('percent');
+			$table->decimal('money_got');//получил сколько
+			$table->decimal('sum'); //общая сумма взноса
 			$table->timestamps();
 		});
 	}

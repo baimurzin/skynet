@@ -149,7 +149,8 @@
             </div>
             <div class="row content">
                 <div class="col chart">
-                    <div id="partschart" style="height: 300px;"></div>
+                    <canvas id="partschart" width="300" height="300"></canvas>
+                    {{--<div id="partschart" style="height: 300px;"></div>--}}
                 </div>
                 <div class="col">
                     <form id="buy" method="POST" action="{{url('/cabinet/buyshares')}}">
@@ -211,17 +212,40 @@
             $('#shares_amount').keyup(function (data) {
                 $('#price_res').val(+$(this).val() * +5000)
             });
+
+
             $.ajax({
                 method: 'get',
                 url: '/cabinet/ajax/parts',
                 success: function (data) {
-                    new Morris.Donut({
-                        element: 'partschart',
-                        data: [
-                            {label: "Осталось долей", value: data.rest},
-                            {label: "Куплено долей", value: data.used}
-                        ]
+
+                    var ctx = $('#partschart');
+
+                    var myPieChart = new Chart(ctx,{
+                        type: 'pie',
+                        data: {
+                            labels: ['Осталось долей', 'Куплено долей'],
+                            datasets: [
+                                {
+                                    data: [data.rest, data.used],
+                                    backgroundColor: [
+                                        "#0064dc",
+                                        "#ff7336"
+                                    ]
+
+                                }
+                            ]
+                        },
+                        options: {}
                     });
+
+//                    new Morris.Donut({
+//                        element: 'partschart',
+//                        data: [
+//                            {label: "Осталось долей", value: data.rest},
+//                            {label: "Куплено долей", value: data.used}
+//                        ]
+//                    });
                 }
             });
 

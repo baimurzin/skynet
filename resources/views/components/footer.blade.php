@@ -5,28 +5,27 @@
         </div>
         <div class="container col-5 copyrights">
             <ul class="light">
-                <li class="copyright">Биржа инвестиций SKYNET 2016</li>
                 <li class="">О компании SKYNET</li>
+                <li>Политика конфиденциальности</li>
             </ul>
         </div>
         <div class="container col-5 nav">
             <ul class="light">
-                <li>Соглашения пользователя</li>
                 <li>Вход в личный кабинет</li>
                 <li>Контакты</li>
             </ul>
         </div>
         <div class="container col-5 tel">
             <ul class="light">
-                <li><img src="{{asset('all/assets/img/phone.png')}}">8 (800) 555-35-35</li>
-                <li><img src="{{asset('all/assets/img/phone.png')}}">+7 (999) 162-54-84</li>
+                <li><img src="{{asset('assets/img/phone.png')}}">8 (800) 555-35-35</li>
             </ul>
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
-                <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
-                <li><img src="{{asset('all/assets/img/twitter.svg')}}"></li>
+                <a href="http://instagram.com/Skynet.one"><li><img src="{{asset('all/assets/img/instagram.svg')}}"></li></a>
+                <a href="https://vk.com/skynetone"><li><img src="{{asset('all/assets/img/vk.svg')}}"></li></a>
+                <a href="http://www.facebook.com/Skynet.one">
+                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li></a>
             </ul>
         </div>
     </div>

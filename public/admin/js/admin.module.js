@@ -7,6 +7,7 @@ $(function () {
         usersTable: '#usersTable',
         usersTableSelected: [],
         dividendPayForm: '#dividendPayForm',
+        incomeTable: '#incomeTable',
 
         initUserShareRequestTable: function () {
             $(adminModule.userShareRequestTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', true);
@@ -63,6 +64,46 @@ $(function () {
                 adminModule.userShareRequestTableSelected = adminModule.tableSelector(e, r, adminModule.userShareRequestTable, adminModule.userShareRequestTableSelected);
 
                 $(adminModule.userShareRequestTable).parents('div.box-body:first').find('.disable-selected').prop('disabled', !adminModule.userShareRequestTableSelected.length);
+            });
+        },
+
+        initIncomeTable: function () {
+            $(adminModule.incomeTable).bootstrapTable({
+                pagination: true,
+                classes: 'table table-striped full',
+                idField: 'id',
+                search: true,
+                uniqueID: 'id',
+                escape: true,
+                method: 'GET',
+                sortName: 'created_at',
+                sortOrder: 'desc',
+                url: $(adminModule.incomeTable).data('url'),
+                columns: [
+                    {
+                        field: 'created_at',
+                        'title': 'Дата',
+                        sortable: true,
+                        width: '150px',
+                        formatter: function(value, row, index) {
+                            return '<span class="small">'+value+'</span>';
+                        }
+                    },
+                    {
+                        field: 'full_name',
+                        title: 'Фамилия имя'
+                    },
+                    {
+                        title: 'Сумма',
+                        formatter: function (value, row, index) {
+                            return row.amount * 5000;
+                        }
+                    },
+                    {
+                        field: 'amount',
+                        title: 'Доли'
+                    }
+                ]
             });
         },
 

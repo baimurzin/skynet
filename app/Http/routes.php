@@ -44,7 +44,8 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'panel' ], function () {
 	Route::get('/users' ,['as' => 'admin.users', 'uses' => 'AdminController@getUsersPage']);
 	Route::get('/users/all' ,['as' => 'get_users_list', 'uses' => 'AdminController@getUsersAll']);
 
-
+	Route::get('/income' ,['as' => 'admin.income', 'uses' => 'AdminController@getIncomePage']);
+	Route::get('/income/all' ,['as' => 'admin.get_income_list', 'uses' => 'AdminController@getIncome']);
 
 	Route::get('/sharesrequests' ,['as' => 'get_admin_requests', 'uses' => 'AdminController@getSharesRequests']);
 	Route::delete('/sharesrequests/{ids}' ,['as' => 'delete_admin_requests', 'uses' => 'AdminController@deleteSharesRequests']);

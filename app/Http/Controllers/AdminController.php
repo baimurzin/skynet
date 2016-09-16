@@ -36,6 +36,14 @@ class AdminController extends Controller
         return view('admin.content.users', compact('users'));
     }
 
+    public function getIncomePage(Request $request) {
+        return view('admin.content.income_h');
+    }
+
+    public function getIncome() {
+        return Transaction::where('status', Transaction::STATUS_ACCEPTED)->get();
+    }
+
     public function getUsersAll(Request $request)
     {
         if (!$request->ajax()) {
@@ -145,5 +153,7 @@ class AdminController extends Controller
             'dividends' => $this->a_money
         ]);
     }
+
+
 
 }

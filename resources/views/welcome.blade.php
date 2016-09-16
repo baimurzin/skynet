@@ -22,8 +22,8 @@
                 <li><a href="/news">Новости</a></li>
                 <li><a href="/about">Проект</a></li>
                 <li><a href="/docs">Документы</a></li>
-                <li><a href="/auth/login">Войти</a></li>
             </ul>
+            <a href="/auth/login"><button class="button-primary">Войти</button></a>
         </div>
     </div>
 </nav>
@@ -32,7 +32,7 @@
     <div class="container content">
         <div class="row">
             <div class="title">
-                <p>SKYNET - платформа для инвестиций от 1$ в действующий бизнес и стартапы по всему миру</p>
+                <p>SKYNET - это краудинвестинговая платформа для инвестиций в действующий бизнес. </p>
             </div>
         </div>
     </div>
@@ -64,9 +64,8 @@
                 </div>
             </div>
             <div class="content row">
-                <iframe width="444" height="250" src="https://www.youtube.com/embed/a59gmGkq_pw" frameborder="0" allowfullscreen></iframe>
-                    <span>Товарищи! укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки форм развития.
-                    <br>Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании новых предложений. Повседневная практика показывает, что консультация с широким активом позволяет оценить значение систем массового участия. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
+                <iframe width="100%" height="515" src="https://www.youtube.com/embed/0-nZ1MH21Wo" frameborder="0" allowfullscreen></iframe>
+                    <span>Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
                     </span>
             </div>
         </div>
@@ -99,9 +98,9 @@
                     <p>Следите за нами в социальных сетях</p>
                 </div>
                 <div class="row content">
-                    <a href=""><img src="{{asset('all/assets/img/instagram.svg')}}"></a>
-                    <a href=""><img src="{{asset('all/assets/img/vk.svg')}}"></a>
-                    <a href=""><img src="{{asset('all/assets/img/twitter.svg')}}"></a>
+                    <a href="http://instagram.com/Skynet.one"><img src="{{asset('all/assets/img/instagram.svg')}}"></a>
+                    <a href="https://vk.com/skynetone"><img src="{{asset('all/assets/img/vk.svg')}}"></a>
+                    <a href="http://www.facebook.com/Skynet.one"><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></a>
                 </div>
             </div>
         </div>
@@ -114,15 +113,12 @@
         </div>
         <div class="container col-5 copyrights">
             <ul class="light">
-                <li class="copyright">Биржа инвестиций SKYNET 2016</li>
                 <li class="">О компании SKYNET</li>
-                <li class="">Инвесторам</li>
-                <li class="">Инвестиционным проектам</li>
+                <li>Политика конфиденциальности</li>
             </ul>
         </div>
         <div class="container col-5 nav">
             <ul class="light">
-                <li>Соглашения пользователя</li>
                 <li>Вход в личный кабинет</li>
                 <li>Контакты</li>
             </ul>
@@ -130,14 +126,14 @@
         <div class="container col-5 tel">
             <ul class="light">
                 <li><img src="{{asset('all/assets/img/phone.png')}}">8 (800) 555-35-35</li>
-                <li><img src="{{asset('all/assets/img/phone.png')}}">+7 (999) 162-54-84</li>
             </ul>
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
-                <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
-                <li><img src="{{asset('all/assets/img/twitter.svg')}}"></li>
+                <a href="http://instagram.com/Skynet.one"><li><img src="{{asset('all/assets/img/instagram.svg')}}"></li></a>
+                <a href="https://vk.com/skynetone"><li><img src="{{asset('all/assets/img/vk.svg')}}"></li></a>
+                <a href="http://www.facebook.com/Skynet.one">
+                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li></a>
             </ul>
         </div>
     </div>

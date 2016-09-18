@@ -37,11 +37,13 @@ class AdminController extends Controller
         return view('admin.content.users', compact('users'));
     }
 
-    public function getIncomePage(Request $request) {
+    public function getIncomePage(Request $request)
+    {
         return view('admin.content.income_h');
     }
 
-    public function getIncome() {
+    public function getIncome()
+    {
         return Transaction::where('status', Transaction::STATUS_ACCEPTED)->get();
     }
 
@@ -58,8 +60,9 @@ class AdminController extends Controller
     {
         return view('admin.content.news');
     }
-    
-    public function addNews(Request $request) {
+
+    public function addNews(Request $request)
+    {
         $news = new News();
         $news->fill($request->all());
         $news->save();
@@ -163,11 +166,18 @@ class AdminController extends Controller
             return response("", 500);
         }
 
-        return DB::table('users')->update([
-            'dividends' => $this->a_money
-        ]);
+        $users = User::where('id', '<>', Auth::user()->id)->get();
+        foreach ($users as $user) {
+            $sum_amount = Transaction::selectRaw('sum(amount) as sum')
+                ->where('user_id', $user->id)
+                ->where('status', Transaction::STATUS_ACCEPTED)
+                ->first()->sum;
+            $sum = $sum_amount * 5000;
+            $dividend = $sum * $percent;
+            $user->increment('dividends', $dividend);
+            $user->save();
+        }
     }
-
 
 
 }

@@ -2,6 +2,8 @@
 <head>
     <title>SKYNET</title>
     <meta charset="utf-8">
+    <link rel="icon" href="{{asset('all/assets/img/favicon.ico')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{asset('all/aseets/img/favicon.ico')}}" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/plugins/slider/css/lightslider.css')}}">
@@ -19,11 +21,21 @@
             </div>
             <ul class="list">
                 <li><a href="/">Главная</a></li>
-                <li><a href="/news">Новости</a></li>
+                <li><a href="cabinet/news">Новости</a></li>
                 <li><a href="/about">Проект</a></li>
-                <li><a href="/docs">Документы</a></li>
+                <li><a href="/documents">Документы</a></li>
             </ul>
-            <a href="/auth/login"><button class="button-primary">Войти</button></a>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <a href="/auth/login">
+                    <button class="button-primary">Личный кабинет</button>
+                </a>
+
+            @else
+                <a href="/auth/login">
+                    <button class="button-primary">Войти</button>
+                </a>
+
+            @endif
         </div>
     </div>
 </nav>
@@ -36,8 +48,7 @@
             </div>
         </div>
     </div>
-</header>
-<div id="main">
+
     <section id="sign">
         <div class="bg-front"></div>
         <div class="container center">
@@ -47,15 +58,18 @@
                 </div>
             </div>
             <div class="row">
-                <a href="/auth/register" class="button-primary">Присоедниться</a>
-                {{--<form id="sign-in">--}}
-                    {{--<input type="text" name="name" placeholder="Имя">--}}
-                    {{--<input type="tel" name="tel" placeholder="Телефон">--}}
-                    {{--<input type="submit" class="button-primary" value="Присоединиться">--}}
-                {{--</form>--}}
+                {{--<a href="/auth/register" class="button-primary">Стать инвестором</a>--}}
+                <form id="sign-in" method="get" action="/auth/register">
+                    <input type="text" name="firstname" placeholder="Имя">
+                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="submit" class="button-primary" value="Присоединиться">
+                </form>
             </div>
         </div>
     </section>
+</header>
+<div id="main">
+
     <section id="about-company">
         <div class="container">
             <div class="row">
@@ -64,7 +78,8 @@
                 </div>
             </div>
             <div class="content row">
-                <iframe width="100%" height="515" src="https://www.youtube.com/embed/0-nZ1MH21Wo" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="515" src="https://www.youtube.com/embed/0-nZ1MH21Wo" frameborder="0"
+                        allowfullscreen></iframe>
                     <span>Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
                     </span>
             </div>
@@ -100,7 +115,8 @@
                 <div class="row content">
                     <a href="http://instagram.com/Skynet.one"><img src="{{asset('all/assets/img/instagram.svg')}}"></a>
                     <a href="https://vk.com/skynetone"><img src="{{asset('all/assets/img/vk.svg')}}"></a>
-                    <a href="http://www.facebook.com/Skynet.one"><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></a>
+                    <a href="http://www.facebook.com/Skynet.one"><img
+                                src="{{asset('all/assets/img/facebook-logo.svg')}}"></a>
                 </div>
             </div>
         </div>
@@ -130,10 +146,15 @@
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <a href="http://instagram.com/Skynet.one"><li><img src="{{asset('all/assets/img/instagram.svg')}}"></li></a>
-                <a href="https://vk.com/skynetone"><li><img src="{{asset('all/assets/img/vk.svg')}}"></li></a>
+                <a href="http://instagram.com/Skynet.one">
+                    <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
+                </a>
+                <a href="https://vk.com/skynetone">
+                    <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
+                </a>
                 <a href="http://www.facebook.com/Skynet.one">
-                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li></a>
+                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li>
+                </a>
             </ul>
         </div>
     </div>
@@ -141,27 +162,27 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="{{asset('all/plugins/slider/js/lightslider.js')}}"></script>
 <script type="text/javascript">
-    $(document).ready( function() {
+    $(document).ready(function () {
         $('#partner').lightSlider({
-            item:5,
-            loop:false,
-            slideMove:2,
+            item: 5,
+            loop: false,
+            slideMove: 2,
             easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-            speed:600,
-            responsive : [
+            speed: 600,
+            responsive: [
                 {
-                    breakpoint:800,
+                    breakpoint: 800,
                     settings: {
-                        item:3,
-                        slideMove:1,
-                        slideMargin:6
+                        item: 3,
+                        slideMove: 1,
+                        slideMargin: 6
                     }
                 },
                 {
-                    breakpoint:480,
+                    breakpoint: 480,
                     settings: {
-                        item:2,
-                        slideMove:1
+                        item: 2,
+                        slideMove: 1
                     }
                 }
             ]
@@ -169,7 +190,7 @@
     });
 </script>
 <script type="text/javascript">
-    $('.menu-button').click(function() {
+    $('.menu-button').click(function () {
         $('.list').toggleClass('nav-active');
     });
 </script>

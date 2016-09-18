@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="tabs">
+        <div class="bg-front"></div>
+        <div class="container">
+            <div class="row">
+
+                <ul>
+                    <li><a style="color: white"  href="/cabinet">Кабинет</a></li>
+                    <li><a style="color: white"  href="{{route('history')}}">История операции</a></li>
+                    {{--<li>Структура</li>--}}
+                    {{--<li><a href="{{route('docs')}}">Документы</a></li>--}}
+                    <li class="this"><a style="color: white" href="{{route('news')}}">Новости</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <section id="table">
         <div class="container">
             <div class="row">

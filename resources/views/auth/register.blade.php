@@ -28,7 +28,7 @@
                         </div>
                         <div class="form-control">
                             <label>Имя:</label>
-                            <input type="text" name="firstname" placeholder="Иван">
+                            <input type="text" name="firstname" value="{{\Illuminate\Support\Facades\Input::get('firstname')}}" placeholder="Иван">
                         </div>
                         <div class="form-control">
                             <label>Фамилия:</label>
@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="form-control">
                             <label>Телефон:</label>
-                            <input type="tel" name="phone" placeholder="+7 (000) 000-00-00">
+                            <input type="tel" name="phone" value="{{\Illuminate\Support\Facades\Input::get('phone')}}" placeholder="+7 (000) 000-00-00">
                         </div>
                         <div class="form-control">
                             <label>Email:</label>

@@ -6,18 +6,18 @@
         <div class="container col-5 copyrights">
             <ul class="light">
                 <li class="">О компании SKYNET</li>
-                <li>Политика конфиденциальности</li>
+                <li><a style="color: rgba(255,255,255,.5);" href="{{asset('docs/politikaconf.pdf')}}">Политика конфиденциальности</a></li>
             </ul>
         </div>
         <div class="container col-5 nav">
             <ul class="light">
-                <li>Вход в личный кабинет</li>
+                <li><a style="color: rgba(255,255,255,.5);" href="auth/login">Вход в личный кабинет</a></li>
                 <li>Контакты</li>
             </ul>
         </div>
         <div class="container col-5 tel">
             <ul class="light">
-                <li><img src="{{asset('assets/img/phone.png')}}">8 (800) 555-35-35</li>
+                <li><img src="{{asset('all/assets/img/phone.png')}}">8 (800) 555-35-35</li>
             </ul>
         </div>
         <div class="container col-5 social">

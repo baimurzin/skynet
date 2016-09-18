@@ -6,7 +6,7 @@
             </div>
             <ul>
                 <li><a href="/">Главная</a></li>
-                <li><a href="/news">Новости</a></li>
+                <li><a href="cabinet/news">Новости</a></li>
                 <li><a href="/about">Проект</a></li>
                 <li><a href="/docs">Документы</a></li>
                 @if(\Illuminate\Support\Facades\Auth::check())

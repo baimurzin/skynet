@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-control">
                             <label>Пароль:</label>
-                            <input name="password" type="text" placeholder="********">
+                            <input name="password" type="password" placeholder="********">
                         </div>
 
                         @if (count($errors))

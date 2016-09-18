@@ -6,11 +6,11 @@
         <div class="container">
             <div class="row">
                 <ul>
-                    <li class="this">Главная</li>
-                    <li><a  href="{{route('history')}}">История операции</a></li>
+                    <li class="this">Кабинет</li>
+                    <li><a style="color: white"  href="{{route('history')}}">История операции</a></li>
                     {{--<li>Структура</li>--}}
-                    <li><a href="{{route('docs')}}">Документы</a></li>
-                    <li><a href="{{route('news')}}">Новости</a></li>
+                    {{--<li><a href="{{route('docs')}}">Документы</a></li>--}}
+                    <li><a style="color: white" href="{{route('news')}}">Новости</a></li>
                 </ul>
             </div>
         </div>
@@ -72,9 +72,9 @@
                     <table>
                         <tr class="table-header">
                             <td>Фамилия Имя</td>
-                            <td>Банк</td>
+                            <td>Наименование банка</td>
                             <td>Номер карты</td>
-                            <td>Регион</td>
+                            <td>Регион филиала банка</td>
                             <td>Номер счета</td>
                             <td>Номер филиала</td>
                             <td>Адрес банка</td>
@@ -133,7 +133,7 @@
                         @foreach($transactions as $one)
                             <tr class="table-filled light">
                                 <td>{{$one->created_at->format('Y-m-d h:i')}}</td>
-                                <td>{{$one->amount * 5}}</td>
+                                <td>{{$one->amount * 5000}}</td>
                                 <td>{{$one->amount}}</td>
                                 <td> Просчитывается</td>
                                 <td>{{$user->a_money}}</td>
@@ -239,13 +239,6 @@
                         options: {}
                     });
 
-//                    new Morris.Donut({
-//                        element: 'partschart',
-//                        data: [
-//                            {label: "Осталось долей", value: data.rest},
-//                            {label: "Куплено долей", value: data.used}
-//                        ]
-//                    });
                 }
             });
 

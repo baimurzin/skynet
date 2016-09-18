@@ -15,12 +15,13 @@ Route::get('/', function() {
 	return view('welcome');
 });
 
+Route::get('/documents', ['as' => 'docs', 'uses' => 'DocsController@index']);
+
 Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabinet'], function () {
 	Route::get('/', ['as' => 'home', 'uses' => 'AccountController@index']);
 
 	Route::get('/history', ['as' => 'history', 'uses' => 'HistoryController@index']);
 
-	Route::get('/docs', ['as' => 'docs', 'uses' => 'DocController@index']);
 
 	Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
 

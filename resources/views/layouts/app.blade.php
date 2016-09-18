@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>SkyNet</title>
-
+    <link rel="icon" href="{{asset('all/assets/img/favicon.ico')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{asset('all/aseets/img/favicon.ico')}}" type="image/x-icon" />
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('all/css/morris.css')}}">

@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\MoneyLog;
+use App\News;
 use App\Transaction;
 use App\User;
 use Illuminate\Database\QueryException;
@@ -51,6 +52,18 @@ class AdminController extends Controller
         }
 
         return User::all();
+    }
+
+    public function indexNews()
+    {
+        return view('admin.content.news');
+    }
+    
+    public function addNews(Request $request) {
+        $news = new News();
+        $news->fill($request->all());
+        $news->save();
+        return redirect()->back();
     }
 
     public function getSharesRequests(Request $request)
@@ -124,6 +137,7 @@ class AdminController extends Controller
             return;
         }
     }
+
 
     private function writeLog($user_made, $user_got_money, $percent, $money)
     {

@@ -23,15 +23,14 @@
             <li>
                 <a href="/panel/users">
                     <i class="fa fa-users"></i> <span>Пользователи</span>
-                    {{--<small class="label pull-right bg-green"> {{$count_users}} </small>--}}
                 </a>
             </li>
 
-            {{--<li>--}}
-                {{--<a href="/panel/news">--}}
-                    {{--<i class="fa fa-newspaper-o"></i> <span>Создать новость</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
+            <li>
+                <a href="/panel/news">
+                    <i class="fa fa-newspaper-o"></i> <span>Создать новость</span>
+                </a>
+            </li>
             <li>
                 <a href="#">
                     <i class="fa fa-newspaper-o"></i> <span>Заявки на выплату</span>

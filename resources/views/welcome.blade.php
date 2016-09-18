@@ -154,7 +154,7 @@
                     settings: {
                         item:3,
                         slideMove:1,
-                        slideMargin:6,
+                        slideMargin:6
                     }
                 },
                 {

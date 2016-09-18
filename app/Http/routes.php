@@ -41,6 +41,10 @@ Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabin
 Route::group(['middleware' => ['admin'], 'prefix' => 'panel' ], function () {
 	Route::get('/' ,['as' => 'panel', 'uses' => 'AdminController@index']);
 
+	Route::get('/news' ,['as' => 'admin.news', 'uses' => 'AdminController@indexNews']);
+
+	Route::post('/news', ['as' => 'admin.create_news', 'uses' => 'AdminController@addNews']);
+
 	Route::get('/users' ,['as' => 'admin.users', 'uses' => 'AdminController@getUsersPage']);
 	Route::get('/users/all' ,['as' => 'get_users_list', 'uses' => 'AdminController@getUsersAll']);
 

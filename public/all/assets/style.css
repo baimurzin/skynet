@@ -15,7 +15,7 @@
 }
 @font-face {
     font-family:'Anders';
-    src: url('fonts/anders.ttf');
+    src: url('fonts/Term.ttf');
 }
 body {
     margin: auto;
@@ -167,7 +167,7 @@ input {
     position: relative;
     padding: .625em 0;
     font-size: 1.625em;
-    font-family: 'Helvetica';
+    font-family: 'Anders';
     color: #0064dc;
     transition: .5s;
 }
@@ -629,6 +629,26 @@ footer .social li:hover {
     color: #ff7336;
     top:50%;
     margin-top: -28px;
+}
+/*news*/
+.news {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.news-item {
+    margin: 1em;
+    border: 1px solid rgba(0,0,0,.3);
+    padding: .5em 2em;
+    width: 40%;
+}
+.news-title {
+    font-size: 1.5em;
+}
+.news-date {
+    color: #8d8d8d;
+    font-size: .875em;
+    text-align: right;
 }
 /*MOBILE*/
 nav .menu-button {

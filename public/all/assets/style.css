@@ -163,11 +163,12 @@ input {
 .button-orange:hover {
     background: #d0531e;
 }
+
 .logo {
     position: relative;
     padding: .625em 0;
     font-size: 1.625em;
-    font-family: 'Anders';
+    font-family: 'anders';
     color: #0064dc;
     transition: .5s;
 }

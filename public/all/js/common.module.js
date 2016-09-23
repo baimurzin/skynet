@@ -76,7 +76,7 @@ $(function () {
                     },
                     {
                         field: 'sum',
-                        title: 'С суммы'
+                        title: 'Сумма инвестиции'
                     }
                 ]
             });
@@ -109,7 +109,7 @@ $(function () {
                         }
                     },
                     {
-                        title: 'Сумма',
+                        title: 'Сумма инвестиции',
                         formatter: function (value, row, index) {
                             return row.amount * 5000;
                         }

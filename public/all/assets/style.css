@@ -265,6 +265,11 @@ nav ul {
     padding: 0;
     list-style: none;
 }
+
+#buy > label,input{
+    /*color: #fff;*/
+}
+
 nav ul li {
     position: relative;
     transition: .3s;

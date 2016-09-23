@@ -101,6 +101,7 @@
                         @endforeach
                     </table>
                 </div>
+
             @endif
 
             @if(!count($user->requisites))
@@ -147,6 +148,13 @@
                     @endif
                 </table>
             </div>
+            <div class="row">
+                <div style="float: right;">
+                    <button type="button" class="button-primary" disabled>Выплатить партнерские</button>
+                    <button class="button-primary" disabled>Выплатить дивиденды</button>
+                </div>
+            </div>
+            <br>
             <div class="row content">
                 <div class="col chart">
                     <canvas id="partschart" width="300" height="300"></canvas>
@@ -180,7 +188,7 @@
                         </div>
                         <div class="rek-control">
                             <p class="head">Адрес</p>
-                            <p> 455044 Челябинская область, г. Магнитогорск пр. Карла Маркса 105/1-31</p>
+                            <p> 455044 Челябинская область, г. Магнитогорск пр. Карла Маркса 105/1</p>
                         </div>
                         <div class="rek-control">
                             <p class="head">Банк</p>
@@ -221,6 +229,7 @@
 
                     var ctx = $('#partschart');
 
+                    Chart.defaults.global.defaultFontColor = '#fff';
                     var myPieChart = new Chart(ctx,{
                         type: 'pie',
                         data: {
@@ -236,7 +245,8 @@
                                 }
                             ]
                         },
-                        options: {}
+                        options: {
+                        }
                     });
 
                 }

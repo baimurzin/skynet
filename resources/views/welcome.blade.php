@@ -17,7 +17,9 @@
                 <img src="{{asset('all/assets/img/menu.svg')}}">
             </div>
             <div class="logo">
-                <p>SKYNET</p>
+                <a style="text-decoration: none;" href="/">
+                    <p>SKYNET</p>
+                </a>
             </div>
             <ul class="list">
                 <li><a href="/">Главная</a></li>

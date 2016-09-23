@@ -29,7 +29,7 @@
 
                 <div class="col-6">
                     <div class="midtitle">
-                        <p>Историяя выводов</p>
+                        <p>История выводов</p>
                     </div>
                     <table data-url="{{URL::route('history.withdraw')}}" id="withdrawTable" class="full"></table>
                 </div>

@@ -131,9 +131,9 @@ class AdminController extends Controller
             $userGet = +$money * +$this->percent[$count] / +100;
             $currentWorkingUser->increment('a_money', $userGet);
             $currentWorkingUser->save();
-            $count++;
             $this->payPartnersMoney($currentWorkingUser, $money, $count, $user_made);
             $this->writeLog($user_made, $currentWorkingUser, $this->percent[$count], $money);
+            $count++;
         }
         //Заканчиваем как отработал 8
         if ($count == 8) {

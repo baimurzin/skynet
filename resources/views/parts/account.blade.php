@@ -164,12 +164,12 @@
                     <form id="buy" method="POST" action="{{url('/cabinet/buyshares')}}">
                         <input name="_token" value="{{csrf_token()}}" type="hidden">
                         <div class="form-control">
-                            <label>Количество долей</label>
-                            <input name="amount" type="text" id="shares_amount" placeholder="0">
+                            <label style="color: #fff;">Количество долей</label>
+                            <input name="amount" style="color: #fff;" type="text" id="shares_amount" placeholder="0">
                         </div>
                         <div class="form-control">
-                            <label>Сумма к оплате</label>
-                            <input id="price_res" type="text" placeholder="0" readonly>
+                            <label style="color: #fff;">Сумма к оплате</label>
+                            <input  style="color: #fff;" id="price_res" type="text" placeholder="0" readonly>
                         </div>
                         <div class="form-control">
                             <input type="submit" class="button-primary" placeholder="0">

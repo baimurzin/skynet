@@ -55,6 +55,7 @@ body {
     font-size: .9em;
 }
 #bank-rek {
+    word-break: break-all;
     font-family: 'Helvetica';
     font-weight: 400;
 }
@@ -69,6 +70,7 @@ body {
 .add-button {
     margin: 2em 0;
 }
+
 .table-header td {
     font-size: .875em;
     color: #fff;
@@ -163,12 +165,11 @@ input {
 .button-orange:hover {
     background: #d0531e;
 }
-
 .logo {
     position: relative;
     padding: .625em 0;
     font-size: 1.625em;
-    font-family: 'anders';
+    font-family: 'Anders';
     color: #0064dc;
     transition: .5s;
 }
@@ -265,11 +266,6 @@ nav ul {
     padding: 0;
     list-style: none;
 }
-
-#buy > label,input{
-    /*color: #fff;*/
-}
-
 nav ul li {
     position: relative;
     transition: .3s;
@@ -682,6 +678,7 @@ nav .menu-button img {
         position: relative;
         z-index: 999;
     }
+
     .nav-active {
         opacity: 1;
         height: auto;
@@ -694,6 +691,10 @@ nav .menu-button img {
     }
     header .title p {
         font-size: 1.5em;
+    }
+    .logo {
+        font-size: 1em;
+        margin: .5em 0;
     }
     input {
         margin: 1em 0;
@@ -726,6 +727,12 @@ nav .menu-button img {
     footer .copyrights, footer .nav {
         display: none;
     }
+    .news-item {
+        width: 100%;
+        padding: .6em;
+
+        margin: 1em 0;
+    }
     footer ul {
         margin: .5em 0;
     }
@@ -744,5 +751,11 @@ nav .menu-button img {
     }
     .button-primary {
         padding: 10px 20px;
+    }
+    @media all and (max-width: 500px) {
+        #sign-in input  {
+            margin: 1em auto;
+            display: block;
+        }
     }
 }

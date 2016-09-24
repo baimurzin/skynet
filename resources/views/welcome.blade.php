@@ -143,7 +143,7 @@
         </div>
         <div class="container col-5 tel">
             <ul class="light">
-                <li><img src="{{asset('all/assets/img/phone.png')}}">8 (800) 555-35-35</li>
+                <li><img src="{{asset('all/assets/img/phone.png')}}">+7 (999) 651-03-93</li>
             </ul>
         </div>
         <div class="container col-5 social">

@@ -106,7 +106,7 @@
 
             @if(!count($user->requisites))
                 <div class="row add-button">
-                    <a href="{{url('cabinet/add_reqs')}}" class="button-primary button-orange">Добавить банковские
+                    <a style='text-decoration:none;' href="{{url('cabinet/add_reqs')}}" class="button-primary button-orange">Добавить банковские
                         реквизиты</a>
                 </div>
             @endif
@@ -192,7 +192,7 @@
                         </div>
                         <div class="rek-control">
                             <p class="head">Банк</p>
-                            <p>Р/С 40702810200020014533 Филиал номер 6602 Банка ВТБ 24 (ЗАО), г.Екатеренбург, пр. Ленина 27</p>
+                            <p>Р/С 40702810200020014533 Филиал номер 6602 Банка ВТБ 24 (ЗАО), г.Екатеринбург, пр. Ленина 27</p>
                         </div>
                         <div class="rek-control">
                             <p class="head">Корректировочный счет</p>

@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
-    <title>SKYNET</title>
+    <title>SKYNET - это краудинвестинговая платформа для инвестиций в действующий бизнес.</title>
     <meta charset="utf-8">
-    <link rel="icon" href="{{asset('all/assets/img/favicon.ico')}}" type="image/x-icon"/>
-    <link rel="shortcut icon" href="{{asset('all/aseets/img/favicon.ico')}}" type="image/x-icon"/>
+    <link rel="icon" href="{{asset('all/assets/img/favicon.ico')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{asset('/all/assets/img/favicon.ico')}}" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{asset('all/assets/img/apple-touch-icon.png')}}">
+	<link rel="icon" type="image/png" href="{{asset('all/assets/img/favicon-32x32.png')}}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{asset('all/assets/img/favicon-16x16.png')}}" sizes="16x16">
+	<link rel="manifest" href="{{asset('all/assets/img/manifest.json')}}">
+	<link rel="mask-icon" href="{{asset('all/assets/img/safari-pinned-tab.svg')}}" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/plugins/slider/css/lightslider.css')}}">
@@ -64,7 +70,7 @@
                 <form id="sign-in" method="get" action="/auth/register">
                     <input type="text" name="firstname" placeholder="Имя">
                     <input type="tel" name="phone" placeholder="Телефон">
-                    <input type="submit" class="button-primary" value="Присоединиться">
+                    <input type="submit" class="button-primary" value="Стать инвестором">
                 </form>
             </div>
         </div>
@@ -96,13 +102,7 @@
             </div>
             <div class="row content">
                 <ul id="partner">
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
-                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}"></li>
+                    <li><img src="{{asset('all/assets/img/ex-logo.png')}}" title="Всероссийская Федерация Jiu-Jitsu"></li>
                 </ul>
             </div>
         </div>
@@ -132,12 +132,12 @@
         <div class="container col-5 copyrights">
             <ul class="light">
                 <li class="">О компании SKYNET</li>
-                <li>Политика конфиденциальности</li>
+                <li><a href="{{asset('docs/politikaconf.pdf')}}" target="_blank">Политика конфиденциальности</a></li>
             </ul>
         </div>
         <div class="container col-5 nav">
             <ul class="light">
-                <li>Вход в личный кабинет</li>
+                <li><a href="auth/login">Вход в личный кабинет</a></li>
                 <li>Контакты</li>
             </ul>
         </div>

@@ -176,6 +176,9 @@ input {
 .logo:hover {
     letter-spacing: .2em;
 }
+.logo a:visited {
+	color: #0064dc;
+}
 .logo:before {
     opacity: 0;
     transition: .5s;
@@ -467,6 +470,17 @@ footer ul li {
 footer ul li:hover {
     color: #fff;
 }
+footer ul li a {
+	color: rgba(255,255,255,.5); 
+	text-decoration:none;
+}	
+footer ul li a:visited {
+    color: rgba(255,255,255,.5);
+}
+footer ul li a:hover {
+    color: #fff;
+}
+
 footer ul li img {
     position: absolute;
     top: 0;

@@ -28,7 +28,7 @@
                         <input type="text" name="card_number" placeholder="0000 0000 0000 0000">
                     </div>
                     <div class="form-control">
-                        <label>Регион:</label>
+                        <label>Регион филиала:</label>
                         <input type="text" name="region" placeholder="РТ">
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <input type="text" name="checking_bill" placeholder="1234567890123">
                     </div>
                     <div class="form-control">
-                        <label>Банк:</label>
+                        <label>Наименование банка:</label>
                         <input type="text" name="bank_name" placeholder="Сбербанк">
                     </div>
                 </div>

@@ -16,6 +16,9 @@ Route::get('/', function() {
 });
 
 Route::get('/documents', ['as' => 'docs', 'uses' => 'DocsController@index']);
+Route::get('/about', function() {
+	return view('parts.about');
+});
 
 Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabinet'], function () {
 	Route::get('/', ['as' => 'home', 'uses' => 'AccountController@index']);

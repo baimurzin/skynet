@@ -221,9 +221,11 @@ $(function () {
                 success: function (data) {
                     commonModule.notify('success', 'Selected reports were archived!');
                     commonModule.refreshTable(adminModule.userShareRequestTable);
+                    adminModule.userShareRequestTableSelected = [];
                 },
                 error: function (e) {
                     commonModule.notify('error', e.status + ': ' + e.statusText);
+                    adminModule.userShareRequestTableSelected = [];
                 }
             })
         },
@@ -266,8 +268,10 @@ $(function () {
                     } else {
                         commonModule.refreshTable(table);
                     }
+                    adminModule.userShareRequestTableSelected = [];
                 },
                 error: function (e) {
+                    adminModule.userShareRequestTableSelected = [];
                     commonModule.notify('error', e.status + ': ' + e.statusText);
                 }
             });

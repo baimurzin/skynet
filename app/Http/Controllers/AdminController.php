@@ -126,19 +126,20 @@ class AdminController extends Controller
         if ($count == 0) {
             $count = 1;
         }
+        //Заканчиваем как отработал 8
+        if ($count == 9) {
+            return;
+        }
         if ($user->parent) {
             $currentWorkingUser = $user->parent;
             $userGet = +$money * +$this->percent[$count] / +100;
             $currentWorkingUser->increment('a_money', $userGet);
             $currentWorkingUser->save();
-            $this->payPartnersMoney($currentWorkingUser, $money, $count, $user_made);
             $this->writeLog($user_made, $currentWorkingUser, $this->percent[$count], $money);
             $count++;
+            $this->payPartnersMoney($currentWorkingUser, $money, $count, $user_made);
         }
-        //Заканчиваем как отработал 8
-        if ($count == 8) {
-            return;
-        }
+
     }
 
 

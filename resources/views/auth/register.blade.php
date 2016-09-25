@@ -8,15 +8,12 @@
                     <p>Регистрация</p>
                 </div>
             </div>
-            @if (isset($errors) && count($errors) > 0)
-                <div class="alert alert-danger">
-                    <strong>Ой!</strong>Кажется возникли небольшие сложности при заполнение формы.<br><br>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            @if (count($errors))
+                <ul class="list-group" style="list-style: none;">
+                    @foreach($errors->all() as $error)
+                        <li class="exception">{{ $error }}</li>
+                    @endforeach
+                </ul>
             @endif
             <div class="row content">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">

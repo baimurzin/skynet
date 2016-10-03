@@ -1,5 +1,6 @@
 
-#partners {background: url('img/bg.jpg') center center fixed;
+#partners {
+	background: url('img/bg.jpg') center center fixed;
     background-size: cover;
 }
 header {
@@ -29,6 +30,8 @@ header {
 }
 #partner {
     text-align: center;
+	max-width:800px; 
+	margin:auto; 
 }
 #partner li img {
     max-width: 150px;

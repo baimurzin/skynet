@@ -22,10 +22,21 @@
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <a href="http://instagram.com/Skynet.one"><li><img src="{{asset('all/assets/img/instagram.svg')}}"></li></a>
-                <a href="https://vk.com/skynetone"><li><img src="{{asset('all/assets/img/vk.svg')}}"></li></a>
-                <a href="http://www.facebook.com/Skynet.one">
-                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li></a>
+                 <a href="http://instagram.com/Skynet.one" target="_blank">
+                    <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
+                </a>
+                <a href="https://vk.com/skynetone" target="_blank">
+                    <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
+                </a>
+                <a href="https://www.facebook.com/groups/188037448274080?ref=bookmarks" target="_blank">
+                    <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li>
+                </a>
+				<a href="https://ok.ru/" target="_blank">
+                    <li><img style="border-radius:1000px;" src="{{asset('all/assets/img/ok.png')}}"></li>
+                </a>
+				<a href="https://www.youtube.com/channel/UCnW0Lz-kHmyjOKKgtwHohEA" target="_blank">
+                    <li><img src="{{asset('all/assets/img/youtube-logo.svg')}}"></li>
+                </a>
             </ul>
         </div>
     </div>

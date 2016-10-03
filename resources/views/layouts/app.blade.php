@@ -16,8 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('all/css/morris.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.css" />
-
-
 </head>
 <body>
 @include('components.nav-header')
@@ -36,6 +34,21 @@
 <script src="{{asset('all/js/common.module.js')}}"></script>
 <script src="{{asset('all/js/raphael.min.js')}}"></script>
 <script src="{{asset('all/js/morris.js')}}"></script>
+<script type=text/javascript>
+	$(document).ready(function() {
+           if($('body').height() <= $(window).outerHeight()) {
+              $('footer').addClass('fixed-bot'); 
+           }
+            else {
+                $('footer').removeClass('fixed-bot');
+            }
+        });
+	</script>
 @yield('scripts')
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'aGamT9on07';var d=document;var w=window;function l(){
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>

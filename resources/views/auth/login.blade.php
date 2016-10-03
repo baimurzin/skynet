@@ -38,6 +38,7 @@
                     <div class="row">
                         <div class="form-control">
                             <input type="submit" class="button-primary" value="Войти">
+							<a href="/auth/register">Регистрация</a>
                         </div>
                     </div>
                 </form>

@@ -70,7 +70,7 @@
                 <form id="sign-in" method="get" action="/auth/register">
                     <input type="text" name="firstname" placeholder="Имя">
                     <input type="tel" name="phone" placeholder="Телефон">
-                    <input type="submit" class="button-primary" value="Стать инвестором">
+                    <input type="submit" class="button-primary button-orange" value="Стать инвестором" style="opacity: 0.95; Padding:30px 65px; font-size:1.1rem;">
                 </form>
             </div>
         </div>
@@ -86,9 +86,9 @@
                 </div>
             </div>
             <div class="content row">
-                <iframe width="100%" height="515" src="https://www.youtube.com/embed/0-nZ1MH21Wo" frameborder="0"
+                <iframe width="100%" height="515" src="https://www.youtube.com/embed/780KLeTr5tw" frameborder="0"
                         allowfullscreen></iframe>
-                    <span>Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
+                    <span align="center" >Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
                     </span>
             </div>
         </div>
@@ -97,7 +97,7 @@
         <div class="container">
             <div class="row">
                 <div class="title">
-                    <p>Наши партнёры</p>
+                    <p>Партнёры</p>
                 </div>
             </div>
             <div class="row content">
@@ -107,22 +107,7 @@
             </div>
         </div>
     </section>
-    <section id="social-block" class="dark">
-        <div class="bg-front"></div>
-        <div class="container">
-            <div class="row">
-                <div class="title light sm">
-                    <p>Следите за нами в социальных сетях</p>
-                </div>
-                <div class="row content">
-                    <a href="http://instagram.com/Skynet.one"><img src="{{asset('all/assets/img/instagram.svg')}}"></a>
-                    <a href="https://vk.com/skynetone"><img src="{{asset('all/assets/img/vk.svg')}}"></a>
-                    <a href="http://www.facebook.com/Skynet.one"><img
-                                src="{{asset('all/assets/img/facebook-logo.svg')}}"></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 </div>
 <footer>
     <div class="container">
@@ -148,14 +133,20 @@
         </div>
         <div class="container col-5 social">
             <ul class="social light">
-                <a href="http://instagram.com/Skynet.one">
+                <a href="http://instagram.com/Skynet.one" target="_blank">
                     <li><img src="{{asset('all/assets/img/instagram.svg')}}"></li>
                 </a>
-                <a href="https://vk.com/skynetone">
+                <a href="https://vk.com/skynetone" target="_blank">
                     <li><img src="{{asset('all/assets/img/vk.svg')}}"></li>
                 </a>
-                <a href="http://www.facebook.com/Skynet.one">
+                <a href="https://www.facebook.com/groups/188037448274080?ref=bookmarks" target="_blank">
                     <li><img src="{{asset('all/assets/img/facebook-logo.svg')}}"></li>
+                </a>
+				<a href="https://ok.ru/group/52987470872727" target="_blank">
+                    <li><img style="border-radius:1000px;" src="{{asset('all/assets/img/ok.png')}}"></li>
+                </a>
+				<a href="https://www.youtube.com/channel/UCnW0Lz-kHmyjOKKgtwHohEA" target="_blank">
+                    <li><img src="{{asset('all/assets/img/youtube-logo.svg')}}"></li>
                 </a>
             </ul>
         </div>
@@ -196,4 +187,19 @@
         $('.list').toggleClass('nav-active');
     });
 </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+           if($('body').height() <= $(window).outerHeight()) {
+              $('footer').addClass('fixed-bot'); 
+           }
+            else {
+                $('footer').removeClass('fixed-bot');
+            }
+        });
+</script>
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'aGamT9on07';var d=document;var w=window;function l(){
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
 </body>

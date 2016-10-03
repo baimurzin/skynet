@@ -18,7 +18,11 @@
     src: url('fonts/Term.ttf');
 }
 body {
+	-webkit-appearance: none;
     margin: auto;
+}
+a {
+	text-decoration:none;
 }
 .container {
     position: relative;
@@ -26,6 +30,12 @@ body {
     padding: 0 15px;
     max-width: 1200px;
     margin: auto;
+}
+.fixed-bot { 
+	position:fixed; 
+	bottom:0; 
+	left:0; 
+	width: 100%; 
 }
 .row {
     padding:0 15px;
@@ -95,7 +105,7 @@ body {
     width: 50%;
 }
 .reks {
-    width: 100%;
+    
 }
 .indicator {
     background: rgba(255,255,255,.3);
@@ -152,10 +162,11 @@ input {
 }
 .button-primary {
     color: #fff;
+	-webkit-appearance: none;
     background: #0064dc;
     border: none;
     transition: .3s;
-    padding: 15px 40px;
+    padding: 18px 45px;
     border-radius: 4px;
     font-family: 'Helvetica';
 }
@@ -668,6 +679,7 @@ footer .social li:hover {
 }
 /*MOBILE*/
 nav .menu-button {
+	-webkit-appearance: none;
     margin-top: 5px;
     padding-right: 15px;
     display: none;
@@ -682,12 +694,16 @@ nav .menu-button img {
         position: absolute;
         overflow: hidden;
         background: #ffffff;
-        width: 50%;
+        width: 150px;
         transition: .5s;
         top: 66.5px;
+		left:15px;
         border-top: 1px solid #f0f0f0;
         box-shadow: 0 7px 10px rgba(0,0,0,.5);
     }
+	.social img 	{
+		left:0px; 
+	}
     nav {
         position: relative;
         z-index: 999;
@@ -750,9 +766,7 @@ nav .menu-button img {
     footer ul {
         margin: .5em 0;
     }
-    footer .social {
-        display: none;
-    }
+    
     #reg form .subtitle {
         padding: 0;
         text-align: center;

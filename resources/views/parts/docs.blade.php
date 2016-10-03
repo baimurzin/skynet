@@ -13,9 +13,16 @@
                     <div class="row flex">
                         
                         <div class="item">
-                            <a href="{{asset('docs/memo.docx')}}">
-                                <img src="{{asset('all/assets/img/item.jpg')}}">
+                            <a href="{{asset('docs/memo.docx')}}" target="_blank">
+                                <img src="{{asset('all/assets/img/memorandym.jpg')}}">
                                 <p><span>Меморандум</span></p>
+                            </a>
+
+                        </div>
+						<div class="item">
+                            <a href="{{asset('docs/dogovordolevogoinvestirovaniya.pdf')}}" target="_blank">
+                                <img src="{{asset('all/assets/img/dogodoli.png')}}">
+                                <p><span>Договор дол.инвес-ия</span></p>
                             </a>
 
                         </div>

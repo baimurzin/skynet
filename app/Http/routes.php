@@ -20,13 +20,21 @@ Route::get('/about', function() {
 	return view('parts.about');
 });
 
+Route::get('/faq', function() {
+	return view('parts.faq');
+});
+
+Route::get('/company', function() {
+	return view('parts.company');
+});
+Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
+
 Route::group(['before' => ['auth'], 'middleware' => ['auth'], 'prefix' => 'cabinet'], function () {
 	Route::get('/', ['as' => 'home', 'uses' => 'AccountController@index']);
 
 	Route::get('/history', ['as' => 'history', 'uses' => 'HistoryController@index']);
 
 
-	Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
 
 	Route::get('/ajax/parts', 'AjaxController@getParts');
 	Route::get('/history/invoiceHistory', ['as' => 'history.invoice', 'uses' => 'HistoryController@getUserInvoices']);

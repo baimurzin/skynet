@@ -29,6 +29,12 @@
                             <textarea name="text" class="form-control tinymce" rows="20">{{old('text')}}</textarea>
                         </div>
 
+                        <div class="form-group ">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="for_auth" value="1" > Для авторизованных?</label>
+                            </div>
+                        </div>
+
                         <button type="submit" class="btn btn-success">Сохранить</button>
 
                     </form>

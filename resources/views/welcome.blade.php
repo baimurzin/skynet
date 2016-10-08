@@ -29,9 +29,11 @@
             </div>
             <ul class="list">
                 <li><a href="/">Главная</a></li>
-                <li><a href="cabinet/news">Новости</a></li>
+                <li><a href="/company">О компании</a></li>
+                <li><a href="/news">Новости</a></li>
                 <li><a href="/about">Проект</a></li>
                 <li><a href="/documents">Документы</a></li>
+                <li><a href="/faq">FAQ</a></li>
             </ul>
             @if(\Illuminate\Support\Facades\Auth::check())
                 <a href="/auth/login">

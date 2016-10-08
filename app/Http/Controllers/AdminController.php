@@ -11,6 +11,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class AdminController extends Controller
 {
@@ -65,6 +66,10 @@ class AdminController extends Controller
     {
         $news = new News();
         $news->fill($request->all());
+        if ($request->input('for_auth', false))
+            $news->type = News::AUTH_NEWS;
+        else
+            $news->type = News::ALL_NEWS;
         $news->save();
         return redirect()->back();
     }

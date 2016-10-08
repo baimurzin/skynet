@@ -88,6 +88,8 @@
             <div class="content row">
                 <iframe width="100%" height="515" src="https://www.youtube.com/embed/780KLeTr5tw" frameborder="0"
                         allowfullscreen></iframe>
+						<iframe width="100%" height="515" src="https://www.youtube.com/embed/0LWWFhR5AJA" frameborder="0" allowfullscreen></iframe>
+						
                     <span align="center" >Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
                     </span>
             </div>

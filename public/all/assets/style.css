@@ -31,12 +31,13 @@ a {
     max-width: 1200px;
     margin: auto;
 }
-.fixed-bot1 { 
+.fixed-bot { 
 	position:fixed; 
 	bottom:0; 
 	left:0; 
 	width: 100%; 
 }
+
 .row {
     padding:0 15px;
 }
@@ -511,7 +512,7 @@ footer .social li:hover {
     opacity: 1;
 }
 .lg {
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .copyright {
     color: #fff;

@@ -13,7 +13,7 @@
                     <div class="row flex">
                         
                         <div class="item">
-                            <a href="{{asset('docs/memo.docx')}}" target="_blank">
+                            <a href="{{asset('docs/memo.pdf')}}" target="_blank">
                                 <img src="{{asset('all/assets/img/memorandym.jpg')}}">
                                 <p><span>Меморандум</span></p>
                             </a>
@@ -24,7 +24,12 @@
                                 <img src="{{asset('all/assets/img/dogodoli.png')}}">
                                 <p><span>Договор дол.инвес-ия</span></p>
                             </a>
-
+                        </div>
+						<div class="item">
+                            <a href="{{asset('docs/strategraz.pdf')}}" target="_blank">
+                                <img src="{{asset('all/assets/img/stratraz.png')}}">
+                                <p><span>Инвестиц.стратегия</span></p>
+                            </a>
                         </div>
                     </div>
                 </div>

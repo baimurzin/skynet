@@ -13,6 +13,7 @@
 	<meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{asset('all/assets/dialogs.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('all/css/morris.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.css" />

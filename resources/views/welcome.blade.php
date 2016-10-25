@@ -12,6 +12,7 @@
 	<meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/index.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/assets/style.css')}}">
+	<link type="text/css" rel="stylesheet" href="{{asset('all/assets/dialogs.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('all/plugins/slider/css/lightslider.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -58,20 +59,15 @@
             </div>
         </div>
     </div>
-
     <section id="sign">
-        <div class="bg-front"></div>
         <div class="container center">
             <div class="row">
                 <div class="title">
                     <p>Присоединяйтесь к нам!</p>
                 </div>
-            </div>
-            <div class="row">
+                
                 {{--<a href="/auth/register" class="button-primary">Стать инвестором</a>--}}
                 <form id="sign-in" method="get" action="/auth/register">
-                    <input type="text" name="firstname" placeholder="Имя">
-                    <input type="tel" name="phone" placeholder="Телефон">
                     <input type="submit" class="button-primary button-orange" value="Стать инвестором" style="opacity: 0.95; Padding:30px 65px; font-size:1.1rem;">
                 </form>
             </div>
@@ -79,21 +75,17 @@
     </section>
 </header>
 <div id="main">
-
     <section id="about-company">
         <div class="container">
             <div class="row">
                 <div class="title">
-                    <p>о компании skynet</p>
+                    <p>как это работает?</p>
                 </div>
             </div>
             <div class="content row">
                 <iframe width="100%" height="515" src="https://www.youtube.com/embed/780KLeTr5tw" frameborder="0"
                         allowfullscreen></iframe>
 						<iframe width="100%" height="515" src="https://www.youtube.com/embed/0LWWFhR5AJA" frameborder="0" allowfullscreen></iframe>
-						
-                    <span align="center" >Идеология - предоставить возможность каждому человеку, вне зависимости от его образования, положения в обществе и статуса на работе, развиваться, зарабатывать, создавать капитал, путешествовать, преуспевать, формируя для себя и своей семьи безопасное, и счастливое окружение.
-                    </span>
             </div>
         </div>
     </section>
@@ -104,7 +96,7 @@
                     <p>Партнёры</p>
                 </div>
             </div>
-            <div class="row content">
+            <div class="row content" style="margin-top:30px; margin-bottom:0px;">
                 <ul id="partner">
                     <li><img src="{{asset('all/assets/img/ex-logo.png')}}" title="Всероссийская Федерация Jiu-Jitsu"></li>
                 </ul>
@@ -120,7 +112,7 @@
         </div>
         <div class="container col-5 copyrights">
             <ul class="light">
-                <li class="">О компании SKYNET</li>
+                <li class=""><a href="/company">О компании SKYNET</a></li>
                 <li><a href="{{asset('docs/politikaconf.pdf')}}" target="_blank">Политика конфиденциальности</a></li>
             </ul>
         </div>

@@ -5,7 +5,7 @@
         </div>
         <div class="container col-5 copyrights">
             <ul class="light">
-                <li class="">О компании SKYNET</li>
+                <li class=""><a href="/company">О компании SKYNET</a></li>
                 <li><a href="{{asset('docs/politikaconf.pdf')}}" target="_blank">Политика конфиденциальности</a></li>
             </ul>
         </div>

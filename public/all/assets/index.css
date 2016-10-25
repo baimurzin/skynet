@@ -22,8 +22,14 @@ header {
 }
 #sign .title p {
     text-transform: none;
-    font-size: .75em;
-    padding: 0 0 1em 0;
+    font-size: .875em;
+    padding: 0 1em 1em 0;
+}
+#sign .title {
+	display:inline-block;
+}
+#sign form {
+	display:inline-block;
 }
 #sign {
     background: #2d2d2d;
